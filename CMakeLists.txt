@@ -135,7 +135,7 @@ add_executable(tomozawa_node src/tomozawa.cpp)
 add_executable(himozawa_node src/fukuzawa.cpp)
 add_executable(control4_node src/control4_node.cpp)
 add_executable(control4_v2.0_node src/control4_v2.0_node.cpp)
-add_executable(control3_node src/coondrol3_node.cpp)
+add_executable(control3_node src/control3_node.cpp)
 
 target_link_libraries(tomozawa_node ${catkin_LIBRARIES})
 target_link_libraries(himozawa_node ${catkin_LIBRARIES})
