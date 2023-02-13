@@ -40,7 +40,7 @@ void chatterCallback(const sensor_msgs::Joy::ConstPtr& msg)
 
 int main(int argc, char **argv)
 {
-  ros::init(argc, argv, "controler_ver2.0");
+  ros::init(argc, argv, "controler4_ver2.0");
   
   ros::Subscriber sub = n.subscribe("Joy", 1000, chatterCallback);
 
