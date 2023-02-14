@@ -30,9 +30,9 @@ void chatterCallback(const sensor_msgs::Joy::ConstPtr& msg)
     r =-1.0f;
   }
   //右回転
-  chatter.publish(get_frame(0x101, x-y+r/2));
+  chatter.publish(get_frame(0x101, y-x+r/2));
   chatter.publish(get_frame(0x111, x+y+r/2));
-  chatter.publish(get_frame(0x121, -x+y+r/2));
+  chatter.publish(get_frame(0x121, x-y+r/2));
   chatter.publish(get_frame(0x131, -x-y+r/2));
   //chatter.publish(get_frame(0x101, x/static_cast<float>(sqrt(2))-y/static_cast<float>(sqrt(2))));
   //100右上、110左上、120左下、130右下
