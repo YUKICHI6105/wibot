@@ -3,7 +3,10 @@
         {
             "name": "Linux",
             "includePath": [
-                "${workspaceFolder}/**"
+                "${workspaceFolder}/**",
+                "/opt/ros/noetic/include",
+                "/home/yukichi/catkin_ws/devel/include",
+                "/home/yukichi/catkin_ws/src/can_plugins/include"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/gcc",
