@@ -43,10 +43,18 @@ void chatterCallback(const sensor_msgs::Joy::ConstPtr& msg)
   {
     r =1.0f;
   }
+  else if(msg->buttons[4]==0)
+  {
+    r =0.0f;
+  }
   //↑左回転
   if(msg->buttons[5]==1)
   {
     r =-1.0f;
+  }
+  else if(msg->buttons[5]==0)
+  {
+    r =0.0f;
   }
   //右回転
   chatter->publish(get_frame(0x101, 2*x+r/2));
