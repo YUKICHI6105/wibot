@@ -18,7 +18,7 @@ int main(int argc, char **argv)
 
   chatter = &lchatter;
 
-  ros::Subscriber sub = n.subscribe("Joy", 1000, chatterCallback);
+  ros::Subscriber sub = n.subscribe("joy", 1000, chatterCallback);
 
   ros::spin();
 

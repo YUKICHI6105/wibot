@@ -134,13 +134,13 @@ include_directories(
 add_executable(tomozawa_node src/tomozawa.cpp)
 add_executable(himozawa_node src/fukuzawa.cpp)
 add_executable(control4_node src/control4_node.cpp)
-add_executable(control4_v2.0_node src/control4_v2.0_node.cpp)
+add_executable(control4_v2_node src/control4_v2_node.cpp)
 add_executable(control3_node src/control3_node.cpp)
 
 target_link_libraries(tomozawa_node ${catkin_LIBRARIES})
 target_link_libraries(himozawa_node ${catkin_LIBRARIES})
 target_link_libraries(control4_node ${catkin_LIBRARIES})
-target_link_libraries(control4_v2.0_node ${catkin_LIBRARIES})
+target_link_libraries(control4_v2_node ${catkin_LIBRARIES})
 target_link_libraries(control3_node ${catkin_LIBRARIES})
 
 ## Rename C++ executable without prefix

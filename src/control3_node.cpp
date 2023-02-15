@@ -14,7 +14,7 @@ int main(int argc, char **argv)
   
   ros::NodeHandle n;
 
-  ros::Subscriber sub = n.subscribe("Joy", 1000, chatterCallback);
+  ros::Subscriber sub = n.subscribe("joy", 1000, chatterCallback);
 
   ros::Publisher lchatter = n.advertise<can_plugins::Frame>("can_tx",1000);
 
