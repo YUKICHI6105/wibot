@@ -45,7 +45,14 @@ void chatterCallback(const sensor_msgs::Joy::ConstPtr& msg)
     chatter->publish(get_frame(0x111, 1.0f));
     chatter->publish(get_frame(0x121, 1.0f));
     chatter->publish(get_frame(0x131, 1.0f));
-  }  
+  } 
+  else if(msg->buttons[4]==0)
+  {
+    chatter->publish(get_frame(0x101, 0.0f));
+    chatter->publish(get_frame(0x111, 0.0f));
+    chatter->publish(get_frame(0x121, 0.0f));
+    chatter->publish(get_frame(0x131, 0.0f));
+  }
   //↑左回転
   if(msg->buttons[5]==1)
   {
@@ -53,6 +60,13 @@ void chatterCallback(const sensor_msgs::Joy::ConstPtr& msg)
     chatter->publish(get_frame(0x121, -1.0f));
     chatter->publish(get_frame(0x121, -1.0f));
     chatter->publish(get_frame(0x121, -1.0f));
+  }
+  else if(msg->buttons[5]==0)
+  {
+    chatter->publish(get_frame(0x101, 0.0f));
+    chatter->publish(get_frame(0x111, 0.0f));
+    chatter->publish(get_frame(0x121, 0.0f));
+    chatter->publish(get_frame(0x131, 0.0f));
   }
   //↑右回転
   float x= -(msg->axes[0]);
