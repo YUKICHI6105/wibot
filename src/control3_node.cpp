@@ -29,7 +29,9 @@ void chatterCallback(const sensor_msgs::Joy::ConstPtr& msg)
 { 
   if(msg->buttons[1]==1)
   {
-    chatter->publish(get_frame(0x100,static_cast<uint8_t>(3)));
+    chatter->publish(get_frame(0x100,static_cast<uint8_t>(5)));
+    chatter->publish(get_frame(0x110,static_cast<uint8_t>(5)));
+    chatter->publish(get_frame(0x120,static_cast<uint8_t>(5)));
   }
   //↑mode_velへ移行
 
