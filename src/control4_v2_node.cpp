@@ -36,6 +36,15 @@ void chatterCallback(const sensor_msgs::Joy::ConstPtr& msg)
   }
   //↑mode_velへ移行
 
+  if(msg->buttons[3]==1)
+  {
+    chatter->publish(get_frame(0x100,static_cast<uint8_t>(0)));
+    chatter->publish(get_frame(0x110,static_cast<uint8_t>(0)));
+    chatter->publish(get_frame(0x120,static_cast<uint8_t>(0)));
+    chatter->publish(get_frame(0x130,static_cast<uint8_t>(0)));
+  }
+  //↑手動でmodeをfolseへ
+
   //can_plugins::Frame a = get_frame(0x101, 1.0f);
   float x= -(msg->axes[0]);
   float y=  (msg->axes[1]);
