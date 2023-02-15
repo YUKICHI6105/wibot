@@ -1,0 +1,9 @@
+<launch>
+
+  <node pkg="joy" name="joy_node" type="joy_node">
+  </node>
+
+  <node pkg="wibot" name="control3_node" type="control3_node">
+  </node>
+
+</launch>
