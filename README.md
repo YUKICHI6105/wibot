@@ -15,7 +15,7 @@ Yボタン mode_disable?に変更
 LB　左回転  
 RB　右回転  
 
-## control4_ver2.0_node
+## control4_ver2_node
 control4_nodeをバージョンアップし回転と直進を同時に行えるようにしました。  
 
 使用コントローラー:logcool F710?(Dモード)  
