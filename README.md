@@ -1,7 +1,12 @@
 # wibot
 ## tomozawa_node himozawa_node
 チュートリアルをコピペしただけなので使わないでください。
-一応動きます。
+一応動きます。  
+
+##launchファイル
+wibot3.launch  
+wibot4.launch  
+wibot4_v2.launch
 
 ## control4_node
 shirasuを使った4輪オムニの制御用コードです。joy_nodeと併用することで回転のみと全方向に直進のみの動作が可能です。  
