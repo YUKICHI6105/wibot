@@ -38,7 +38,7 @@ void chatterCallback(const sensor_msgs::Joy::ConstPtr& msg)
   }
   //↑mode_velへ移行
 
-  if(msg->buttons[3]==1)
+  if(msg->buttons[2]==1)
   {
     chatter->publish(get_frame(0x100,static_cast<uint8_t>(0)));
     chatter->publish(get_frame(0x110,static_cast<uint8_t>(0)));
@@ -54,32 +54,25 @@ void chatterCallback(const sensor_msgs::Joy::ConstPtr& msg)
     chatter->publish(get_frame(0x111, 1.0f));
     chatter->publish(get_frame(0x121, 1.0f));
     chatter->publish(get_frame(0x131, 1.0f));
-  } 
-  else if(msg->buttons[4]==0)
-  {
-    chatter->publish(get_frame(0x101, 0.0f));
-    chatter->publish(get_frame(0x111, 0.0f));
-    chatter->publish(get_frame(0x121, 0.0f));
-    chatter->publish(get_frame(0x131, 0.0f));
   }
   //↑左回転
-  if(msg->buttons[5]==1)
+  else if(msg->buttons[5]==1)
   {
     chatter->publish(get_frame(0x101, -1.0f));
     chatter->publish(get_frame(0x111, -1.0f));
     chatter->publish(get_frame(0x121, -1.0f));
     chatter->publish(get_frame(0x131, -1.0f));
   }
-  else if(msg->buttons[5]==0)
+  //↑右回転
+  else if(msg->buttons[4]==msg->buttons[5])
   {
     chatter->publish(get_frame(0x101, 0.0f));
     chatter->publish(get_frame(0x111, 0.0f));
     chatter->publish(get_frame(0x121, 0.0f));
     chatter->publish(get_frame(0x131, 0.0f));
   }
-  //↑右回転
-  float x= -(msg->axes[2]);
-  float y=  (msg->axes[3]);
+  float x= -(msg->axes[0]);
+  float y=  (msg->axes[1]);
   chatter->publish(get_frame(0x101, y-x));
   chatter->publish(get_frame(0x111, -x-y));
   chatter->publish(get_frame(0x121, x-y));
