@@ -78,8 +78,8 @@ void chatterCallback(const sensor_msgs::Joy::ConstPtr& msg)
     chatter->publish(get_frame(0x131, 0.0f));
   }
   //↑右回転
-  float x= -(msg->axes[0]);
-  float y=  (msg->axes[1]);
+  float x= -(msg->axes[2]);
+  float y=  (msg->axes[3]);
   chatter->publish(get_frame(0x101, y-x));
   chatter->publish(get_frame(0x111, x+y));
   chatter->publish(get_frame(0x121, x-y));
