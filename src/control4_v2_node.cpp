@@ -60,7 +60,7 @@ void chatterCallback(const sensor_msgs::Joy::ConstPtr& msg)
   //↑左回転
   if(msg->buttons[5]==1)
   {
-    r =1.0f;
+    r =-1.0f;
   }
   else if(msg->buttons[5]==0)
   {
