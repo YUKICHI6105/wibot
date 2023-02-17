@@ -63,7 +63,7 @@ int main(int argc, char **argv)
     std::stringstream ss;
     ss << "hello world " << count;
     msg.data = ss.str();
-
+    //ssにメッセージ作ってmsg.dateに入れて変換してるだけ？
     ROS_INFO("%s", msg.data.c_str());
 
     /**
