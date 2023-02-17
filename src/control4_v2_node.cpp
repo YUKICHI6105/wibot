@@ -46,8 +46,8 @@ void chatterCallback(const sensor_msgs::Joy::ConstPtr& msg)
   //↑手動でmodeをfolseへ
 
   //can_plugins::Frame a = get_frame(0x101, 1.0f);
-  float x= -(msg->axes[0]);
-  float y=  (msg->axes[1]);
+  float x= -(msg->axes[3]);
+  float y=  (msg->axes[4]);
   float r= 0;
   if(msg->buttons[4]==1)
   {
@@ -60,7 +60,7 @@ void chatterCallback(const sensor_msgs::Joy::ConstPtr& msg)
   //↑左回転
   if(msg->buttons[5]==1)
   {
-    r =-1.0f;
+    r =1.0f;
   }
   else if(msg->buttons[5]==0)
   {
