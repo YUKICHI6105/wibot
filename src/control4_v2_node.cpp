@@ -33,6 +33,11 @@ void chatterCallback(const sensor_msgs::Joy::ConstPtr& msg)
     chatter->publish(get_frame(0x110,static_cast<uint8_t>(5)));
     chatter->publish(get_frame(0x120,static_cast<uint8_t>(5)));
     chatter->publish(get_frame(0x130,static_cast<uint8_t>(5)));
+    chatter->publish(get_frame(0x140,static_cast<uint8_t>(0)));
+    chatter->publish(get_frame(0x200,static_cast<uint8_t>(5)));
+    chatter->publish(get_frame(0x210,static_cast<uint8_t>(5)));
+    chatter->publish(get_frame(0x300,static_cast<uint8_t>(5)));
+    chatter->publish(get_frame(0x304,static_cast<uint8_t>(5)));
   }
   //↑mode_velへ移行
 
@@ -42,6 +47,11 @@ void chatterCallback(const sensor_msgs::Joy::ConstPtr& msg)
     chatter->publish(get_frame(0x110,static_cast<uint8_t>(0)));
     chatter->publish(get_frame(0x120,static_cast<uint8_t>(0)));
     chatter->publish(get_frame(0x130,static_cast<uint8_t>(0)));
+    chatter->publish(get_frame(0x140,static_cast<uint8_t>(0)));
+    chatter->publish(get_frame(0x200,static_cast<uint8_t>(0)));
+    chatter->publish(get_frame(0x210,static_cast<uint8_t>(0)));
+    chatter->publish(get_frame(0x300,static_cast<uint8_t>(0)));
+    chatter->publish(get_frame(0x304,static_cast<uint8_t>(0)));
   }
   //↑手動でmodeをfolseへ
 
@@ -63,7 +73,7 @@ void chatterCallback(const sensor_msgs::Joy::ConstPtr& msg)
     r =0.0f;
   }
   //右回転
-  chatter->publish(get_frame(0x101, 6.28f*(y-x+r)));
+  chatter->publish(get_frame(0x141, 6.28f*(y-x+r)));
   chatter->publish(get_frame(0x111, 6.28f*(-x-y+r)));
   chatter->publish(get_frame(0x121, 6.28f*(x-y+r)));
   chatter->publish(get_frame(0x131, 6.28f*(x+y+r)));
