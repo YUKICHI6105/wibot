@@ -57,7 +57,7 @@ void chatterCallback(const sensor_msgs::Joy::ConstPtr& msg)
     r =-1.0f;
   }
   //↑右回転
-  else if(msg->buttons[4]==msg->buttons[5])
+  if(msg->buttons[4]==msg->buttons[5])
   {
     r =0.0f;
   }
